@@ -1,6 +1,8 @@
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /*
  * To change this template, choose Tools | Templates
@@ -27,8 +29,8 @@ public class MyStack {
         mem[top++] = i;
     }
 
-    public int pop() throws StackIsEmptyException{
-        if(top == 0) {
+    public int pop() throws StackIsEmptyException {
+        if (top == 0) {
             throw new StackIsEmptyException("Din stack er tom din ko");
         }
         return mem[--top];
@@ -43,7 +45,6 @@ public class MyStack {
             ms.push(2);
             ms.push(5);
 
-            System.out.println(Integer.toString(ms.pop()));
             System.out.println(Integer.toString(ms.pop()));
             System.out.println(Integer.toString(ms.pop()));
         } catch (StackIsFullException | StackIsEmptyException ex) {
